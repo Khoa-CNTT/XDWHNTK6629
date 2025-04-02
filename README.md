@@ -2,7 +2,6 @@
 
 ## 1. Yêu Cầu Hệ Thống
 - 🟢 Node.js >= 14.x
-- ⚫ Composer
 - 🖥️ MongoDB
 
 ## 2. Cài Đặt
@@ -34,13 +33,13 @@ npm install
 ### Chạy backend
 ```sh
 cd server
-npm run dev
+npm run server
 ```
 
 ### Chạy frontend
 ```sh
 cd client
-npm run server
+npm run dev
 ```
 
 ## 📞 Liên Hệ
