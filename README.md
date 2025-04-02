@@ -1,67 +1,48 @@
-# HomiTutor - Online Tutoring Platform
+# Cài Đặt & Chạy Dự Án
 
-HomiTutor is a full-stack application that connects students with tutors for personalized learning experiences.
+## 1. Yêu Cầu Hệ Thống
+- 🟢 Node.js >= 14.x
+- ⚫ Composer
+- 🖥️ MongoDB
 
-## Project Structure
+## 2. Cài Đặt
 
-- **client**: Frontend application built with Next.js and React
-- **server**: Backend API built with Express.js and MongoDB
+### Repository
+- **Frontend**: [https://github.com/Khoa-CNTT/XDWHNTK6629/tree/main/client](#)
+- **Backend**: [https://github.com/Khoa-CNTT/XDWHNTK6629/tree/main/server](#)
 
-## Prerequisites
-
-- Node.js (v14 or higher)
-- MongoDB (local installation or connection string)
-- npm
-
-## Getting Started
-
-### Setting up the Backend
-
-1. Navigate to the server directory:
-
-```bash
-cd server
+### Clone repository
+```sh
+git clone https://github.com/Khoa-CNTT/XDWHNTK6629.git
+cd XDWHNTK6629
 ```
 
-2. Install dependencies:
-
-```bash
-npm install
-```
-
-The server will run on http://localhost:5000
-
-### Setting up the Frontend
-
-1. Navigate to the client directory:
-
-```bash
+### Cài đặt backend
+```sh
 cd client
-```
-
-2. Install dependencies:
-
-```bash
 npm install
 ```
 
-## Features
+### Cài đặt frontend
+```sh
+cd frontend
+npm install
+```
 
-- User Authentication (Register, Login, Profile Management)
-- Student and Tutor Dashboards
-- Course Management
-- Session Scheduling
-- Real-time Chat
-- Reviews and Ratings
-- Payment Processing
+## 3. Khởi Chạy Dự Án
 
-## Technologies Used
+### Chạy backend
+```sh
+cd server
+npm run dev
+```
 
-### Frontend
+### Chạy frontend
+```sh
+cd client
+npm run server
+```
 
-- React
-
-### Backend
-
-- Express.js
-- MongoDB
+## 📞 Liên Hệ
+- 📧 Email: ngok13051211@gmail.com
+- 🔗 GitHub: [https://github.com/Khoa-CNTT/XDWHNTK6629](https://github.com/Khoa-CNTT/XDWHNTK6629)
