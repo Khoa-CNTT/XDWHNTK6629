@@ -1,0 +1,100 @@
+.tutorListSection {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.sectionSubtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+.tutorCard {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.tutorCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    overflow: hidden;
+}
+
+.tutorImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.tutorCard:hover .tutorImage {
+    transform: scale(1.05);
+}
+
+.tutorName {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+.tutorSubject {
+    color: #FF5E5B;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.tutorRating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.starFilled {
+    color: #ffc107;
+}
+
+.star {
+    color: #e0e0e0;
+}
+
+.ratingText {
+    color: #666;
+    font-size: 0.9rem;
+    margin-left: 5px;
+}
+
+.tutorExperience {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.tutorPrice {
+    font-weight: 600;
+    color: #28a745;
+    font-size: 1.1rem;
+    margin: 0;
+}

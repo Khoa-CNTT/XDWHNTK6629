@@ -1,0 +1,57 @@
+.footer {
+    background-color: #1A1A1A;
+    color: white;
+    padding: 2rem 0;
+}
+
+.title {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.linkList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.linkList li {
+    margin-bottom: 0.8rem;
+}
+
+.linkList a {
+    color: #999;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.linkList a:hover {
+    color: white;
+}
+
+.socialLinks {
+    display: flex;
+    gap: 1rem;
+}
+
+.socialIcon {
+    color: #999;
+    font-size: 1.2rem;
+    transition: color 0.2s ease;
+}
+
+.socialIcon:hover {
+    color: white;
+}
+
+.copyright {
+    text-align: left;
+    color: #999;
+    font-size: 0.9rem;
+    padding-top: 2rem;
+    border-top: 1px solid #333;
+    margin-top: 1rem;
+}
