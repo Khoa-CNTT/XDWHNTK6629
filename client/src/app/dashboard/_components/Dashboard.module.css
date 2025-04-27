@@ -1,0 +1,232 @@
+.settingsPage {
+    padding: 2rem 0;
+    min-height: calc(100vh - 80px);
+    background-color: #f8f9fa;
+    margin-top: 80px;
+}
+
+.settingsContainer {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.section {
+    padding: 2rem;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+.sectionTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sectionIcon {
+    color: #666;
+    font-size: 1.25rem;
+}
+
+.sectionContent {
+    color: #666;
+}
+
+.avatarSection {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.avatarWrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #f8f9fa;
+}
+
+.avatar {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+}
+
+.uploadButton {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.uploadButton:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Form Styling */
+:global(.form-label) {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+:global(.form-control) {
+    border: 1px solid #ddd;
+    border-radius: 0.375rem;
+    padding: 0.625rem;
+    font-size: 0.875rem;
+}
+
+:global(.form-control:focus) {
+    border-color: #00a550;
+    box-shadow: 0 0 0 0.2rem rgba(0, 165, 80, 0.25);
+}
+
+.changePasswordButton {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+}
+
+/* Save Button Styling */
+.formActions {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.saveButton {
+    padding: 0.625rem 2rem !important;
+    font-size: 0.875rem !important;
+    background-color: #00a550 !important;
+    border-color: #00a550 !important;
+    transition: all 0.2s ease !important;
+}
+
+.saveButton:hover {
+    background-color: #008f45 !important;
+    border-color: #008f45 !important;
+}
+
+.saveButton:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 165, 80, 0.25) !important;
+}
+
+.cancelButton {
+    padding: 0.625rem 2rem !important;
+    font-size: 0.875rem !important;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .settingsPage {
+        padding: 1rem 0;
+        margin-top: 60px;
+    }
+
+    .section {
+        padding: 1.5rem;
+    }
+
+    .avatarWrapper {
+        width: 120px;
+        height: 120px;
+    }
+
+    .sectionTitle {
+        font-size: 1.125rem;
+        margin-bottom: 1rem;
+    }
+
+    .formActions {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        flex-direction: column;
+    }
+
+    .saveButton,
+    .cancelButton {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .section {
+        padding: 1rem;
+    }
+
+    .avatarWrapper {
+        width: 100px;
+        height: 100px;
+    }
+
+    .formActions {
+        margin-top: 1rem;
+        padding-top: 1rem;
+    }
+}
+
+.passwordSection {
+    margin: 1rem 0;
+}
+
+.passwordInput {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.eyeButton {
+    position: absolute;
+    right: 0;
+    background: none !important;
+    border: none !important;
+    color: #666 !important;
+    padding: 0.4rem 0.8rem !important;
+    box-shadow: none !important;
+}
+
+.eyeButton:hover {
+    color: #333 !important;
+}
+
+.passwordButtons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+}
+
+/* Responsive styling for password section */
+@media (max-width: 768px) {
+    .passwordButtons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .passwordButtons button {
+        width: 100%;
+        margin-right: 0 !important;
+        margin-bottom: 0.5rem;
+    }
+}

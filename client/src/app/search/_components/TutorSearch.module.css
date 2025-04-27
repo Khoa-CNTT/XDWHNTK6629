@@ -1,0 +1,472 @@
+.container {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    padding: 2rem 0;
+    margin-top: 80px;
+}
+
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.tutorListSection {
+    padding: 3rem 0;
+    min-height: calc(100vh - 80px);
+    background-color: #f8f9fa;
+    margin-top: 80px;
+}
+
+.contentContainer {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.searchHeader {
+    width: 100%;
+    margin: 0 auto 1.5rem;
+    padding: 0;
+    background-color: transparent;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    text-align: left;
+}
+
+.filters {
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.filterGroup {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.filterWrapper {
+    position: relative;
+}
+
+.filterButton {
+    padding: 0.5rem 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 24px;
+    cursor: pointer;
+    background-color: white;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    color: #4a5568;
+    font-size: 0.9rem;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filterButton:hover {
+    background-color: #f8f9fa;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.filterButton.active {
+    background-color: #e6f7ef;
+    border-color: #00a550;
+    color: #00a550;
+}
+
+.filterDropdown {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    z-index: 1000;
+    min-width: 240px;
+    padding: 0.75rem 0;
+    margin-top: 0.5rem;
+    background-color: white;
+    border: 1px solid #eaeaea;
+    border-radius: 0.7rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.filterOption {
+    padding: 0.7rem 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: background-color 0.2s ease;
+    font-size: 0.95rem;
+    color: #4a5568;
+}
+
+.filterOption input[type="checkbox"] {
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #00a550;
+}
+
+.filterOption:hover {
+    background-color: #f8f9fa;
+}
+
+.filterOption.selected {
+    background-color: #e6f7ef;
+}
+
+.filterActions {
+    padding: 0.75rem 1.2rem;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.5rem;
+}
+
+.applyButton {
+    padding: 0.6rem 1.2rem;
+    background-color: #00a550;
+    color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,165,80,0.2);
+}
+
+.applyButton:hover {
+    background-color: #008f45;
+    box-shadow: 0 3px 6px rgba(0,165,80,0.3);
+}
+
+.tutorCount {
+    margin-bottom: 1.5rem;
+    color: #4a5568;
+    font-size: 0.95rem;
+    font-weight: 400;
+    text-align: left;
+}
+
+/* Tutor card styling - preserve existing */
+.tutorGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.tutorCard {
+    height: 100%;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    position: relative;
+}
+
+.tutorCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 75%;
+    background-color: #f8f9fa;
+    overflow: hidden;
+}
+
+.tutorImage {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.tutorCard:hover .tutorImage {
+    transform: scale(1.05);
+}
+
+.levelBadge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.superProf {
+    background-color: #ffca28;
+    color: #333;
+}
+
+.pro {
+    background-color: #2196f3;
+    color: white;
+}
+
+.new {
+    background-color: #4caf50;
+    color: white;
+}
+
+.favoriteButton {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    color: #666;
+    z-index: 2;
+    font-size: 1.1rem;
+}
+
+.favoriteButton:hover {
+    transform: scale(1.1);
+    color: #ff4757;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.firstLessonFree {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.4rem 0;
+    background-color: rgba(0, 165, 80, 0.85);
+    color: white;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 500;
+    z-index: 2;
+}
+
+.tutorInfo {
+    padding: 1.5rem;
+}
+
+.tutorName {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.35rem;
+    line-height: 1.4;
+}
+
+.tutorLocation {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.locationIcon {
+    color: #e74c3c;
+    font-size: 0.9rem;
+}
+
+.tutorRating {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.star,
+.starFilled {
+    color: #ffc107;
+    font-size: 0.9rem;
+}
+
+.ratingText {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    margin-left: 0.4rem;
+}
+
+.tutorExperience {
+    font-size: 0.9rem;
+    color: #4a5568;
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.5;
+    height: 2.8rem;
+}
+
+.tutorPrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #f0f0f0;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #00a550;
+}
+
+.viewButton {
+    padding: 0.5rem 1rem;
+    background-color: #00a550;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.viewButton:hover {
+    background-color: #008f45;
+}
+
+.paginationContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.paginationButtonWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.paginationButton {
+    background: white;
+    border: 1px solid #eaeaea;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.paginationButton:hover:not(:disabled) {
+    background-color: #f8f9fa;
+    border-color: #00a550;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.paginationButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.paginationInfo {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #4a5568;
+    background-color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Updated row and col styling to match UI requirements */
+:global(.row.g-4) {
+    max-width: 1140px;
+    margin: 0 auto !important;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .tutorListSection {
+        padding: 1.5rem 0;
+        margin-top: 60px;
+    }
+
+    .searchHeader {
+        margin-bottom: 1.5rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .tutorCount {
+        margin-bottom: 1rem;
+    }
+
+    .filterDropdown {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        border-radius: 16px 16px 0 0;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    .tutorInfo {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .title {
+        font-size: 1.3rem;
+    }
+
+    .tutorCard {
+        border-radius: 12px;
+    }
+
+    .tutorInfo {
+        padding: 0.75rem;
+    }
+}

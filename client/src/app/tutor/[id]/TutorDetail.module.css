@@ -1,0 +1,486 @@
+.tutorDetailPage {
+  padding-top: 80px;
+  background-color: #fff;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tag {
+  background-color: rgba(255, 192, 203, 0.15);
+  color: #ff4d6d;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.headline {
+  margin-bottom: 40px;
+}
+
+.headline h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.3;
+  max-width: 90%;
+}
+
+.section {
+  margin-bottom: 40px;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.locationBadge {
+  display: inline-flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.badgeIcon {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+.ambassadorSection {
+  margin-bottom: 40px;
+  background-color: #f8f0ff;
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+}
+
+.ambassadorBadge {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  color: #6a11cb;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.ambassadorText {
+  color: #333;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.aboutContent {
+  position: relative;
+}
+
+.truncatedText {
+  max-height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.truncatedText::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+}
+
+.fullText {
+  max-height: none;
+}
+
+.aboutContent p {
+  margin-bottom: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.seeMoreButton {
+  padding: 0;
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.lessonOptions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.levelBadge, .languageBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #e0e0e0;
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: sticky;
+  top: 100px;
+}
+
+.profileCard {
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  overflow: hidden;
+  border: none;
+}
+
+.profileHeader {
+  padding: 20px;
+  position: relative;
+}
+
+.avatarContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.avatar {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.tutorInfo {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.tutorName {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.tutorRating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.stars {
+  color: #ffcd3c;
+  letter-spacing: -2px;
+}
+
+.reviewCount {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.favoriteButton, .shareButton {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.tutorFeatures {
+  padding: 0 20px 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.featureItem {
+  text-align: center;
+  padding: 10px;
+}
+
+.featureLabel {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.featureValue {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.contactContainer {
+  padding: 0 20px 20px;
+}
+
+.contactButton {
+  width: 100%;
+  height: 50px;
+  background-color: #00a550;
+  border-color: #00a550;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactButton:hover {
+  background-color: #008944;
+  border-color: #008944;
+}
+
+.contactIcon {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+.firstLessonFree {
+  background-color: #fef5f3;
+  color: #ff4d4d;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-top: 1px solid #ffe0dd;
+}
+
+.freeLabel {
+  display: inline-block;
+}
+
+/* Styles for other tutors section */
+.otherTutorsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.otherTutorsTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.sliderControls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slideCount {
+  color: #666;
+  font-size: 0.9rem;
+  margin-right: 5px;
+}
+
+.sliderButton {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  background: white;
+  color: #333;
+  padding: 0;
+}
+
+.sliderButton:hover:not(:disabled) {
+  background-color: #f5f5f5;
+}
+
+.sliderButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.tutorCarousel {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 5px 0;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.tutorCarousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.tutorCard {
+  flex: 0 0 auto;
+  width: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: white;
+}
+
+.tutorCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tutorCardLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.tutorCardImage {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.tutorCardAvatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tutorCardContent {
+  padding: 15px;
+}
+
+.tutorCardName {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 5px;
+  color: #333;
+}
+
+.tutorCardLocation {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0 0 15px;
+}
+
+.tutorCardFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.newBadge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #ff8c00;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.tutorCardPrice {
+  display: flex;
+  flex-direction: column;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.firstFree {
+  font-size: 0.8rem;
+  color: #ff4d4d;
+}
+
+@media (max-width: 992px) {
+  .headline h1 {
+    font-size: 1.8rem;
+    max-width: 100%;
+  }
+  
+  .tutorFeatures {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .sidebar {
+    margin-top: 30px;
+    position: static;
+  }
+  
+  .tutorCard {
+    width: 180px;
+  }
+  
+  .tutorCardImage {
+    height: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  .headline h1 {
+    font-size: 1.5rem;
+  }
+  
+  .tag {
+    font-size: 12px;
+    padding: 4px 12px;
+  }
+  
+  .section {
+    margin-bottom: 30px;
+  }
+  
+  .sectionTitle {
+    font-size: 1.3rem;
+  }
+  
+  .otherTutorsTitle {
+    font-size: 1.5rem;
+  }
+  
+  .tutorCarousel {
+    gap: 12px;
+  }
+  
+  .tutorCard {
+    width: 160px;
+  }
+  
+  .tutorCardImage {
+    height: 160px;
+  }
+}

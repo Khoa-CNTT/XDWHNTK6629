@@ -1,0 +1,343 @@
+.subjectSelection {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    overflow: hidden;
+    margin-top: 80px;
+    /* Thêm khoảng cách cho header */
+}
+
+.selectionRow {
+    width: 100%;
+    margin: 0;
+}
+
+/* Cột bên trái - phần mô tả */
+.instructionColumn {
+    background-color: #fff5f5;
+    /* Màu nền cam nhạt */
+    padding: 20px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.instructionContent {
+    position: sticky;
+    top: 20px;
+    background-color: #fff;
+    /* Nền trắng */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.instructionIcon {
+    font-size: 3rem;
+    color: #e53e3e;
+    margin-bottom: 20px;
+}
+
+.instructionTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 20px;
+}
+
+.instructionText {
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.infoBox {
+    background-color: #ffefef;
+    border-left: 4px solid #e53e3e;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.infoText {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #4a5568;
+    line-height: 1.5;
+}
+
+/* Cột bên phải - phần chọn lựa */
+.selectionColumn {
+    background-color: #fff5f5;
+    /* Màu nền cam nhạt giống bên trái */
+    padding: 20px;
+    border-radius: 10px;
+    min-height: calc(100vh - 80px);
+    overflow-y: auto;
+}
+
+.selectionColumnContent {
+    background-color: #fff;
+    /* Nền trắng */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #2d3748;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: #4a5568;
+    margin-bottom: 24px;
+}
+
+/* Nút backButton chính ở vị trí absolute (giữ lại cho trường hợp khác) */
+.backButton {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    background: none;
+    border: none;
+    color: #4a5568;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.backButton:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #2d3748;
+}
+
+.subjectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* Grid riêng cho lớp học - kích thước nhỏ hơn */
+.gradesGrid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+}
+
+.subjectCard {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+
+/* Kích thước nhỏ hơn cho các nút lớp học */
+.gradeCard {
+    height: 100px;
+    padding: 10px;
+}
+
+.subjectCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.subjectCard.selected {
+    border-color: #e53e3e;
+    background-color: rgba(229, 62, 62, 0.05);
+}
+
+.subjectIcon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+    color: #e53e3e;
+}
+
+.subjectName {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    color: #2d3748;
+}
+
+/* Font size nhỏ hơn cho tên lớp */
+.gradeCard .subjectName {
+    font-size: 1.1rem;
+}
+
+/* Điều chỉnh buttonContainer để các nút nằm sát nhau */
+.buttonContainer {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+    justify-content: flex-end;
+    /* Thay đổi từ space-between thành flex-end */
+}
+
+.button {
+    background-color: #e53e3e;
+    color: white;
+    border: none;
+    padding: 12px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.button:hover {
+    background-color: #c53030;
+}
+
+.button:disabled {
+    background-color: #cbd5e0;
+    cursor: not-allowed;
+}
+
+/* Nút Quay lại trong container */
+.buttonContainer .backButton {
+    position: static;
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    color: #4a5568;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 12px 32px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    order: -1;
+    /* Đảm bảo nút Quay lại luôn ở bên trái */
+}
+
+.buttonContainer .backButton:hover {
+    background-color: #e5e7eb;
+    color: #2d3748;
+}
+
+/* Media queries để responsive trên mobile */
+@media (max-width: 768px) {
+    .instructionColumn {
+        min-height: auto;
+        padding: 40px 20px;
+    }
+
+    .selectionColumn {
+        min-height: auto;
+        padding: 40px 20px;
+    }
+
+    .instructionContent {
+        max-width: 100%;
+    }
+
+    .title {
+        font-size: 1.75rem;
+    }
+
+    .instructionTitle {
+        font-size: 1.75rem;
+    }
+}
+
+/* Thanh tiến trình các bước */
+.stepsProgress {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    position: relative;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stepsProgress::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background-color: #e2e8f0;
+    z-index: 1;
+}
+
+.step {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+}
+
+.stepCircle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+}
+
+.stepCircle.active {
+    background-color: #e53e3e;
+    border-color: #e53e3e;
+    color: white;
+}
+
+.stepCircle.completed {
+    background-color: #48bb78;
+    border-color: #48bb78;
+    color: white;
+}
+
+.stepLabel {
+    font-size: 0.8rem;
+    color: #718096;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stepLabel.active {
+    color: #e53e3e;
+    font-weight: 600;
+}
