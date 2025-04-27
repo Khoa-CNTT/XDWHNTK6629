@@ -1,0 +1,402 @@
+.step5Container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  overflow: hidden;
+  margin-top: 30px; /* Điều chỉnh khoảng cách giữa header và nội dung */
+}
+
+.contentRow {
+  width: 100%;
+  margin: 0;
+}
+
+.instructionColumn {
+  background-color: #fff5f5;
+  /* Màu nền cam nhạt */
+  padding: 20px;
+  position: relative;
+  border-radius: 10px;
+}
+
+.instructionContent {
+  position: sticky;
+  top: 20px;
+  background-color: #fff;
+  /* Nền trắng */
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.instructionIcon {
+  font-size: 2.5rem;
+  color: #fe6c6c;
+  margin-bottom: 20px;
+}
+
+.instructionTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.instructionText {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.infoIcon {
+  color: #fe6c6c;
+  font-size: 1.2rem;
+  margin-right: 10px;
+  padding-top: 2px;
+}
+
+.infoText {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.infoBox {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.infoBoxText {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.formColumn {
+  background-color: #fff5f5;
+  /* Màu nền cam nhạt giống bên trái */
+  padding: 20px;
+  border-radius: 10px;
+  min-height: calc(100vh - 80px);
+  overflow-y: auto;
+}
+
+.formColumnContent {
+  background-color: #fff;
+  /* Nền trắng */
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.stepsProgress {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  position: relative;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stepsProgress::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background-color: #e2e8f0;
+  z-index: 1;
+}
+
+.step {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+}
+
+.stepCircle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 0.8rem;
+}
+
+.stepCircle.active {
+  background-color: #fe6c6c;
+}
+
+.stepCircle.completed {
+  background-color: #4CAF50;
+}
+
+.stepLabel {
+  font-size: 0.75rem;
+  color: #888;
+  text-align: center;
+  font-weight: 500;
+}
+
+.stepLabel.active {
+  color: #333;
+  font-weight: 600;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: #fe6c6c;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.formSection {
+  margin-bottom: 30px;
+}
+
+.sectionTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.priceInputContainer {
+  display: flex;
+  align-items: center;
+  max-width: 300px;
+  /* Tăng độ rộng tối đa từ 200px lên 300px */
+  margin: 40px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: visible;
+  /* Đảm bảo nội dung không bị cắt */
+}
+
+.currencySymbol {
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  border-right: none;
+}
+
+.priceInput {
+  flex: 1;
+  padding: 10px 15px;
+  border: none;
+  font-size: 1.2rem;
+  outline: none;
+  text-align: right;
+  min-width: 150px;
+  /* Đảm bảo ô input có độ rộng tối thiểu */
+  width: 100%;
+  /* Cho phép input sử dụng toàn bộ không gian có sẵn */
+}
+
+.priceUnit {
+  padding: 10px 15px;
+  color: #333;
+  font-weight: 500;
+  background-color: transparent;
+  border: none;
+}
+
+.durationOptions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.durationOption {
+  padding: 12px 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  flex: 1;
+  max-width: 120px;
+  text-align: center;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.durationOption:hover {
+  border-color: #fe6c6c;
+}
+
+.durationOption.selected {
+  border-color: #fe6c6c;
+  background-color: #fff5f5;
+  color: #fe6c6c;
+  font-weight: 600;
+}
+
+.checkIcon {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #fe6c6c;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+}
+
+.daysContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.dayOption {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+
+.dayOption:hover {
+  border-color: #fe6c6c;
+}
+
+.dayOption.selected {
+  background-color: #fe6c6c;
+  border-color: #fe6c6c;
+  color: white;
+}
+
+.navButtons {
+  display: flex;
+  gap: 15px;
+  /* Tạo khoảng cách giữa 2 nút */
+  justify-content: flex-end;
+  /* Đặt các nút sang bên phải */
+  margin-top: 40px;
+}
+
+.backButton {
+  background: none;
+  border: 1px solid #e2e8f0;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #4a5568;
+  order: -1;
+  /* Đảm bảo nút quay lại luôn nằm bên trái */
+}
+
+.backButton:hover {
+  background-color: #f7fafc;
+  border-color: #cbd5e0;
+}
+
+.nextButton {
+  padding: 12px 30px;
+  background-color: #fe6c6c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.nextButton:hover {
+  background-color: #e55c5c;
+}
+
+.nextButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Success message styles */
+.submitSuccessMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 600px;
+  margin: 40px auto 0;
+}
+
+.submitSuccessIcon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #4CAF50;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.submitSuccessTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.submitSuccessText {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.goodToKnowIcon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}

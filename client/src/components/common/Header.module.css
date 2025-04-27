@@ -1,0 +1,317 @@
+.header {
+    background: linear-gradient(180deg, white 0%, rgba(255, 229, 229, 0.4) 100%);
+    box-shadow: none;
+    padding: 15px 0;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.header :global(.container) {
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
+    max-width: 100% !important;
+}
+
+.logo {
+    color: #FF5E5B !important;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 3rem;
+}
+
+/* Header Search Bar */
+.headerSearch {
+    flex: 1;
+    max-width: 600px;
+    margin-right: auto;
+    margin-left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.headerSearch.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.searchForm {
+    background: white;
+    padding: 8px;
+    border-radius: 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.inputGroup {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.searchInput,
+.locationInput {
+    flex: 1;
+    position: relative;
+}
+
+.inputIcon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    z-index: 1;
+}
+
+.searchInput input,
+.locationInput input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border: none;
+    border-radius: 25px;
+    background: #f5f5f5;
+    transition: background-color 0.3s ease;
+}
+
+.searchInput input:focus,
+.locationInput input:focus {
+    outline: none;
+    box-shadow: none;
+    background: #f0f0f0;
+}
+
+.searchButton {
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 500;
+    background-color: #FF5E5B;
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.searchButton:hover {
+    opacity: 0.9;
+}
+
+/* Navigation buttons */
+.nav {
+    margin-left: auto;
+    display: flex;
+    gap: 1rem;
+}
+
+.helpButton {
+    color: #333 !important;
+    padding: 8px 16px;
+    transition: all 0.2s ease;
+    border: none !important;
+    background: none !important;
+    border-radius: 20px !important;
+}
+
+.helpButton:hover {
+    color: white !important;
+    background-color: #FF5E5B !important;
+}
+
+.becomeButton {
+    border-radius: 20px !important;
+    color: #333 !important;
+    font-weight: 500;
+    padding: 8px 16px;
+    transition: all 0.2s ease;
+    border: none !important;
+    background: none !important;
+}
+
+.becomeButton:hover {
+    color: white !important;
+    background-color: #FF5E5B !important;
+}
+
+.loginButton {
+    color: #333 !important;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    background: none !important;
+    border: none !important;
+    padding: 8px 16px;
+    border-radius: 20px !important;
+}
+
+.loginButton:hover {
+    color: white !important;
+    background-color: #FF5E5B !important;
+}
+
+/* User Dropdown */
+.userDropdown {
+    margin-left: 8px;
+}
+
+.userToggle {
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+    display: flex !important;
+    align-items: center !important;
+    background: none !important;
+    border: none !important;
+}
+
+.userToggle::after {
+    margin-left: 8px;
+    vertical-align: middle;
+    color: #666;
+}
+
+.userToggle:hover {
+    color: white !important;
+    background-color: #FF5E5B !important;
+}
+
+.userToggle:hover .userName,
+.userToggle:hover::after {
+    color: white;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.userName {
+    font-weight: 500;
+    color: #333;
+}
+
+.userAvatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatarImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.userMenu {
+    padding: 8px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    min-width: 220px;
+}
+
+.userMenu :global(.dropdown-header) {
+    font-weight: 600;
+    color: #333;
+    padding: 12px 16px;
+    font-size: 14px;
+}
+
+.userMenu :global(.dropdown-divider) {
+    margin: 4px 0;
+}
+
+.dropdownItem {
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #495057;
+    border-radius: 8px;
+    margin: 2px 0;
+    transition: all 0.2s ease;
+}
+
+.dropdownItem:hover,
+.dropdownItem:focus {
+    background-color: rgba(255, 94, 91, 0.1);
+    color: #FF5E5B;
+}
+
+.dropdownIcon {
+    font-size: 16px;
+    color: #666;
+    transition: color 0.2s ease;
+}
+
+.dropdownItem:hover .dropdownIcon {
+    color: #FF5E5B;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .header :global(.container) {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+
+    .logo {
+        margin-right: 1.5rem;
+    }
+
+    .headerSearch {
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 0;
+    }
+
+    .header :global(.container) {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    .logo {
+        font-size: 20px;
+        margin-right: 0;
+    }
+
+    .headerSearch {
+        display: none;
+    }
+
+    .nav {
+        gap: 0.5rem;
+    }
+
+    .helpButton,
+    .becomeButton,
+    .loginButton {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+
+    .userName {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .becomeButton {
+        display: none;
+    }
+
+    .helpButton {
+        padding: 6px;
+    }
+}

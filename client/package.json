@@ -1,5 +1,5 @@
 {
-  "name": "client",
+  "name": "homi",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,24 +9,25 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "bootstrap": "^5.3.3",
-    "client": "file:",
-    "next": "15.2.2",
+    "bootstrap": "^5.3.5",
+    "homi": "file:",
+    "next": "15.3.0",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.9",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
-    "react-modal": "^3.16.3",
-    "swiper": "^11.2.5"
+    "react-toastify": "^11.0.5",
+    "swiper": "^11.2.6"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@types/node": "^22.13.10",
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.4",
-    "@types/react-modal": "^3.16.3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "15.2.2",
-    "typescript": "^5.8.2"
+    "eslint-config-next": "15.3.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }

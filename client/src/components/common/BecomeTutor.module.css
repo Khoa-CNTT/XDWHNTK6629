@@ -1,0 +1,190 @@
+.becomeTutorSection {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+    position: relative;
+    overflow: hidden;
+}
+
+.content {
+    padding-right: 20px;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #343a40;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.benefitsList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.benefitItem {
+    display: flex;
+    align-items: center;
+    font-size: 1.05rem;
+    color: #495057;
+}
+
+.checkIcon {
+    color: #dc3545;
+    margin-right: 12px;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.registerButton {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    font-weight: 600;
+    padding: 10px 24px;
+    font-size: 1.05rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    color: white;
+    text-decoration: none;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.registerButton:hover,
+.registerButton:focus,
+.registerButton:active {
+    background-color: #c82333 !important;
+    border-color: #bd2130 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.2) !important;
+    color: white !important;
+    outline: none !important;
+}
+
+.registerButton:focus {
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25) !important;
+}
+
+.arrowIcon {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.registerButton:hover .arrowIcon {
+    transform: translateX(5px);
+}
+
+.imageWrapper {
+    position: relative;
+}
+
+.imageContainer {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.5s ease;
+}
+
+.imageContainer:hover .image {
+    transform: scale(1.03);
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    margin-top: -50px;
+    position: relative;
+    z-index: 2;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.statNumber {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #dc3545;
+    margin-bottom: 5px;
+}
+
+.statLabel {
+    font-size: 0.95rem;
+    color: #6c757d;
+}
+
+@media (max-width: 992px) {
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .content {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .becomeTutorSection {
+        padding: 60px 0;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .stats {
+        margin-top: -40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .becomeTutorSection {
+        padding: 40px 0;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .stats {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .statItem {
+        width: 33%;
+    }
+}
